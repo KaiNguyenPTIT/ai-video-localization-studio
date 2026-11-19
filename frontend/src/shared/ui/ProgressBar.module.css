@@ -1,0 +1,36 @@
+.track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-sunken);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.sm { height: 5px; }
+.md { height: 8px; }
+.lg { height: 12px; }
+
+.fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: var(--radius-full);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.primary { background: linear-gradient(90deg, var(--primary), var(--accent)); }
+.success { background: linear-gradient(90deg, #22c55e, var(--success)); }
+.warning { background: linear-gradient(90deg, #f59e0b, var(--warning)); }
+.error   { background: linear-gradient(90deg, #ef4444, var(--error)); }
+
+.animated {
+  background-image: linear-gradient(90deg, var(--primary), #fb7185, var(--primary));
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+.indeterminate {
+  position: absolute;
+  width: 40% !important;
+  animation: indeterminate 1.4s ease-in-out infinite;
+}

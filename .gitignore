@@ -1,0 +1,38 @@
+# Đọc file này khi commit — không commit dữ liệu runtime
+
+# --- Python ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# --- Secrets ---
+.env
+*.env
+!.env.example
+
+# --- Dữ liệu runtime (SQLite, media, cache, log) ---
+data/
+output/
+outputs/
+temp/
+tmp/
+uploads/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Frontend ---
+node_modules/
+static/assets/
+dist/
+.vite/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

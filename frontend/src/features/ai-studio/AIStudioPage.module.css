@@ -1,0 +1,719 @@
+.page {
+  padding-bottom: 48px;
+}
+
+/* ── Quản lý tài khoản Google AI Studio ─────────────────── */
+.accountSection {
+  padding: 0 28px;
+  margin-bottom: 24px;
+}
+
+.accountCard {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accountHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.accountProfile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-hover, rgba(255, 255, 255, 0.08));
+  border: 1px solid var(--border);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #4285f4);
+}
+
+.accountInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.accountTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.accountTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.accountSubtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.badgeSuccess {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badgeWarning {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(234, 179, 8, 0.12);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badgeRunning {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.statusDotGreen {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  display: inline-block;
+}
+
+.statusDotYellow {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #eab308;
+  display: inline-block;
+}
+
+.accountActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.accountTip {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-hover, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 6px;
+  line-height: 1.45;
+}
+
+.accountTip svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary);
+}
+
+/* ── Thanh lọc trạng thái ──────────────────────── */
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filterBar > div {
+  overflow-x: auto;
+}
+
+/* ── Danh sách các thẻ tập phim ────────────────── */
+.list {
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  animation: fadeIn 0.2s ease;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.epTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.viewBtn svg {
+  color: var(--primary);
+}
+
+.viewBtn:hover {
+  color: var(--primary);
+}
+
+.projectLink {
+  background: none;
+  border: none;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.projectLink:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.fileName {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.fileName svg {
+  flex-shrink: 0;
+}
+
+.statusActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Stepper quy trình 5 bước ──────────────────── */
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 16px;
+  padding: 10px 0;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  color: var(--text-muted);
+}
+
+.stepDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  padding: 0 4px;
+}
+
+.stepDone {
+  color: var(--success);
+}
+
+.stepDone .stepDot {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.5);
+  color: var(--success);
+}
+
+.stepActive {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.stepActive .stepDot {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.18);
+}
+
+.stepLine {
+  position: absolute;
+  top: 13px;
+  left: calc(50% + 14px);
+  width: calc(100% - 28px);
+  height: 2px;
+  background: var(--border);
+}
+
+/* ── Content ───────────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  line-height: 1.5;
+}
+
+.message svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--text-muted);
+}
+
+.stepPanel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+
+.stepPanelColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.stepPanel h4, .stepPanelColumn h4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.panelHint {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Lời nhắc (Prompt) */
+.promptHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.promptMeta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+.promptActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.promptText {
+  width: 100%;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 12px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+/* Hai lựa chọn thực hiện */
+.methodsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  margin-top: 8px;
+  align-items: stretch;
+}
+
+.autoMethodBox {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: rgba(225, 29, 72, 0.05);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  border-radius: var(--radius);
+}
+
+.manualMethodBox {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.methodHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.methodHeader strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--text);
+}
+
+.methodBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--primary);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.methodDesc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.autoBtnRow {
+  margin-top: auto;
+}
+
+.autoRunBtn {
+  width: 100%;
+  font-weight: 600;
+}
+
+.toolActionsRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.scriptInput {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 12px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.scriptInput:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+}
+
+.valid {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.invalid {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--error);
+}
+
+.warn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--warning);
+}
+
+.submitActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.awaitingHint {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius);
+  color: var(--warning);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.awaitingHint svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Tiến trình dựng video */
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.pct {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: monospace;
+}
+
+/* Kết quả hoàn thành */
+.resultPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resultHeader h4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.studioActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.playerWrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+}
+
+.completedScript {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Thất bại & Lỗi */
+.errorPanel {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.errorPanel h4 {
+  color: var(--error);
+}
+
+.errorDesc {
+  font-size: 12.5px;
+  color: var(--error);
+  font-family: monospace;
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+.errorActions {
+  margin-top: 4px;
+}
+
+@media (max-width: 960px) {
+  .methodsContainer {
+    grid-template-columns: 1fr;
+  }
+  .filterBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .list, .filterBar {
+    padding: 0 16px;
+  }
+  .stepLabel {
+    font-size: 9.5px;
+  }
+}

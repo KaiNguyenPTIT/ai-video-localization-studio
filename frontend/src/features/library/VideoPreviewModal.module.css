@@ -1,0 +1,195 @@
+.previewOverlay {
+  position: fixed;
+  z-index: var(--z-overlay);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-6);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(6px);
+  animation: fadeIn var(--transition-fast);
+}
+
+.previewPanel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  max-height: calc(100vh - 40px);
+  flex-direction: column;
+  overflow: hidden;
+  padding: var(--sp-5) var(--sp-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-xl);
+  animation: popIn var(--transition);
+}
+
+.previewClose {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  z-index: 1;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+  padding-right: 44px;
+}
+
+.previewTitle {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.previewBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: var(--sp-1);
+}
+
+.previewBadge {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--info-light);
+  color: var(--info);
+  border: 1px solid var(--info-border);
+}
+
+.previewWorkspace {
+  display: grid;
+  height: min(62vh, 560px);
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--sp-4);
+  align-items: stretch;
+}
+
+.previewVideo { min-width: 0; display: flex; flex-direction: column; }
+
+.noVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: var(--sp-2);
+  background: #0f172a;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: var(--fs-base);
+}
+
+.mergeStrip {
+  margin-top: var(--sp-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-sunken);
+  overflow: hidden;
+}
+
+.mergeStripHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.mergeStripHeader h3 {
+  margin: 2px 0 0;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.mergeTotal { font-size: var(--fs-xs); color: var(--text-muted); white-space: nowrap; }
+
+.mergeTiles {
+  display: flex;
+  gap: var(--sp-2);
+  overflow-x: auto;
+  padding: var(--sp-3);
+}
+
+.mergeTile {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+.mergeTile:hover { border-color: var(--primary-border); background: var(--primary-light); transform: translateY(-1px); }
+.mergeTileActive {
+  border: 2px solid var(--primary);
+  background: var(--primary-light);
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.25);
+}
+
+.mergeTileName { font-weight: 800; color: var(--text); font-size: var(--fs-md); white-space: nowrap; }
+.mergeTileActive .mergeTileName { color: var(--primary); }
+.mergeTileTime { font-size: 10px; color: var(--success-hover); font-family: monospace; font-weight: 600; }
+
+.previewMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) 0;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.previewMetaItem { display: flex; align-items: center; gap: 4px; }
+.previewMetaLabel { color: var(--text-muted); }
+.previewMetaVal { font-weight: 600; color: var(--text-secondary); }
+
+.previewActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+@media (max-width: 960px) {
+  .previewWorkspace {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}

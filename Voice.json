@@ -1,0 +1,74 @@
+[
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV421_vivn_streaming",
+    "display_name": "Nhỏ Ngọt Ngào",
+    "resource_id": "7252594014782755330",
+    "syls_per_sec": 5.32
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV074_streaming_dsp",
+    "display_name": "Giọng Bé",
+    "resource_id": "7550087831092251920",
+    "syls_per_sec": 5.25
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV074_streaming",
+    "display_name": "Cô Gái Hoạt Ngôn",
+    "resource_id": "7102355709945188865",
+    "syls_per_sec": 5.25
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV075_streaming_vibrato_dsp",
+    "display_name": "Việt Méo",
+    "resource_id": "7569450639810465040",
+    "syls_per_sec": 5.00
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV562_streaming",
+    "display_name": "Mai",
+    "resource_id": "7483736254694035984",
+    "syls_per_sec": 5.14
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV075_streaming_demon_dsp",
+    "display_name": "Kenny Đại Đế",
+    "resource_id": "7569442422665661712",
+    "syls_per_sec": 4.93
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV075_streaming_robot_dsp",
+    "display_name": "Robot VN",
+    "resource_id": "7538698409633516816",
+    "syls_per_sec": 5.04
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV075_streaming",
+    "display_name": "Thanh Niên Tự Tin",
+    "resource_id": "7102355803792740865",
+    "syls_per_sec": 5.00
+  },
+  {
+    "lan": "vi",
+    "lang": "vi-VN",
+    "voice_type": "BV560_streaming",
+    "display_name": "Alex Đại Đế",
+    "resource_id": "7483736167565758992",
+    "syls_per_sec": 5.50
+  }
+]

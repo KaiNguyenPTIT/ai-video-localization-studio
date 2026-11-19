@@ -1,0 +1,285 @@
+.page { padding-bottom: 56px; }
+
+.loading {
+  padding: 60px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--fs-lg);
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+}
+
+/* ---------- Merge banner ---------- */
+.mergeBanner {
+  margin: 0 var(--sp-6) var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  background: linear-gradient(135deg, var(--primary-light) 0%, #ffe4e6 100%);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  box-shadow: var(--shadow-sm);
+}
+.mergeBannerLeft { display: flex; align-items: center; gap: var(--sp-4); min-width: 0; }
+.mergeBannerIcon {
+  width: 46px; height: 46px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius); background: #fff; color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.mergeBannerTitle { font-size: var(--fs-lg); font-weight: 700; color: var(--primary-hover); }
+.mergeBannerSubtitle { font-size: var(--fs-md); color: var(--primary); margin-top: 2px; }
+.mergeBannerActions { display: flex; align-items: center; gap: var(--sp-2); flex-shrink: 0; }
+.linkBtn { text-decoration: none; }
+
+/* ---------- Episode table ---------- */
+.tableWrap {
+  margin: 0 var(--sp-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.table { width: 100%; border-collapse: collapse; font-size: var(--fs-md); }
+
+.table th {
+  text-align: left;
+  padding: var(--sp-3) var(--sp-4);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--bg-sunken);
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: var(--sp-4);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.table tr:hover td { background: var(--surface-hover); }
+.table tr:last-child td { border-bottom: none; }
+
+.runningRow td {
+  background: var(--primary-light) !important;
+  border-bottom-color: var(--primary-border);
+}
+
+.epMainCell { min-width: 180px; max-width: 300px; }
+.epName { font-weight: 700; font-size: var(--fs-base); color: var(--text); white-space: nowrap; }
+.fileName {
+  color: var(--text-muted);
+  max-width: 280px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: var(--fs-sm);
+  margin-top: 2px;
+}
+
+.configCell { min-width: 170px; }
+.configChips { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-1); }
+
+.modeBadgeApi {
+  font-size: 10px; padding: 2px 7px; border-radius: var(--radius-full);
+  background: var(--info-light); color: var(--info); font-weight: 700; border: 1px solid var(--info-border);
+}
+.modeBadgeManual {
+  font-size: 10px; padding: 2px 7px; border-radius: var(--radius-full);
+  background: var(--warning-light); color: var(--warning); font-weight: 700; border: 1px solid var(--warning-border);
+}
+
+.configVoice {
+  font-size: var(--fs-sm); font-weight: 600; color: var(--text-secondary);
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.configSub {
+  font-size: 11px; color: var(--text-muted);
+  display: flex; align-items: center; gap: 5px;
+}
+.configDot { color: var(--border-strong); }
+.configModel { font-family: ui-monospace, SFMono-Regular, monospace; color: var(--text-muted); font-size: 10px; }
+
+.statusProgressCell { min-width: 180px; max-width: 260px; }
+.statusBlock { display: flex; flex-direction: column; gap: var(--sp-1); align-items: flex-start; }
+.progressBlock { display: flex; flex-direction: column; gap: var(--sp-1); width: 100%; }
+.progressTop { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); }
+.progressPct { font-size: 11px; font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; }
+
+.completedSub { font-size: 11px; color: var(--success-hover); font-weight: 500; }
+.pendingSub { font-size: 11px; color: var(--text-muted); }
+.failedSub {
+  font-size: 11px; color: var(--error);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px;
+}
+.awaitingLabel { font-size: var(--fs-sm); color: var(--warning); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+.runningMsg {
+  font-size: 11px; color: var(--primary); font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 220px;
+}
+
+.actions { display: flex; gap: var(--sp-2); align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+
+.btnPrimaryRun {
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.25) !important;
+}
+.btnPrimaryRun:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+.btnWatch {
+  background: var(--success-light) !important;
+  color: var(--success-hover) !important;
+  border: 1px solid var(--success-border) !important;
+  font-weight: 600 !important;
+}
+.btnWatch:hover { background: #bbf7d0 !important; }
+
+.btnCancel {
+  background: var(--error-light) !important;
+  color: var(--error) !important;
+  border: 1px solid var(--error-border) !important;
+}
+.btnCancel:hover { background: #fecdd3 !important; }
+
+.btnRetry {
+  background: var(--warning-light) !important;
+  color: var(--warning) !important;
+  border: 1px solid var(--warning-border) !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- Modal helpers ---------- */
+.label {
+  display: block;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+.settingsInput,
+.settingsTextarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: var(--fs-base);
+  margin-bottom: var(--sp-2);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.settingsInput:focus,
+.settingsTextarea:focus { border-color: var(--primary); box-shadow: var(--shadow-focus); }
+
+.settingsTextarea { resize: vertical; min-height: 96px; line-height: 1.5; }
+
+.settingsHint { font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--sp-4); line-height: 1.55; }
+
+.fileBadge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--sp-4);
+}
+.fileBadgeName { overflow: hidden; min-width: 0; }
+.fileBadgeLabel { font-size: var(--fs-md); font-weight: 600; color: var(--text); }
+.fileBadgeValue {
+  font-size: var(--fs-md); color: var(--text-secondary);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  display: inline-block; max-width: 100%; vertical-align: bottom;
+}
+
+/* ---------- Merge list ---------- */
+.mergeList { display: flex; flex-direction: column; gap: var(--sp-2); max-height: 380px; overflow-y: auto; padding-right: 4px; }
+.mergeItem {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: var(--surface);
+  transition: background var(--transition), border-color var(--transition);
+}
+.mergeItem:hover { background: var(--bg-sunken); }
+.mergeItemChecked { border-color: var(--primary); background: var(--primary-light); }
+.mergeItem input[type='checkbox'] { accent-color: var(--primary); width: 16px; height: 16px; cursor: pointer; }
+.mergeEpNo { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); }
+.mergeDur { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-sm); color: var(--success-hover); font-weight: 600; white-space: nowrap; }
+
+/* ---------- Character / suggest rows ---------- */
+.chipsRow { display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-3); flex-wrap: wrap; }
+
+.suggestRow { display: flex; align-items: center; gap: var(--sp-2); margin-bottom: var(--sp-2); }
+.rowRemoving { opacity: 0.6; }
+.strike { text-decoration: line-through; }
+
+.suggestCheckbox { flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; }
+
+.suggestNameStatic { flex: 0 0 200px; font-weight: 600; font-size: var(--fs-base); color: var(--text); }
+.suggestAliasStatic { flex: 1; color: var(--text-secondary); font-size: var(--fs-md); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.suggestNameInput,
+.suggestAliasInput {
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-md);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.suggestNameInput { flex: 0 0 220px; }
+.suggestAliasInput { flex: 1; min-width: 0; }
+.suggestNameInput:focus,
+.suggestAliasInput:focus { border-color: var(--primary); box-shadow: var(--shadow-focus); }
+.suggestNameInput:disabled,
+.suggestAliasInput:disabled { background: var(--bg-sunken); color: var(--text-muted); }
+
+.charAddRow {
+  display: flex; gap: var(--sp-3); margin-bottom: var(--sp-5); align-items: center;
+  background: var(--bg-sunken); padding: var(--sp-3); border-radius: var(--radius); border: 1px solid var(--border);
+}
+.charAddRow .settingsInput { margin-bottom: 0; }
+.charListWrap { max-height: 350px; overflow-y: auto; padding-right: 4px; }
+
+.charRow {
+  display: flex; align-items: center; gap: var(--sp-3);
+  background: var(--surface); padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: var(--sp-2);
+}
+.charNameCol { flex: 0 0 200px; font-weight: 600; color: var(--text); font-size: var(--fs-base); }
+.charAliasCol { flex: 1; color: var(--text-secondary); font-size: var(--fs-md); }
+
+.mutedItalic { opacity: 0.55; font-style: italic; }
+
+@media (max-width: 768px) {
+  .tableWrap { overflow-x: auto; margin: 0 var(--sp-4); }
+  .overview { padding: var(--sp-4); }
+  .mergeBanner { margin: 0 var(--sp-4) var(--sp-4); flex-direction: column; align-items: flex-start; }
+  .charAddRow { flex-direction: column; align-items: stretch; }
+  .charNameCol, .suggestNameStatic { flex-basis: auto; }
+  .suggestRow { flex-wrap: wrap; }
+}

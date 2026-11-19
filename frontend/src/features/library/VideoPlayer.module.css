@@ -1,0 +1,62 @@
+.player {
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.player video {
+  width: 100%;
+  display: block;
+  max-height: 480px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.speedGroup {
+  display: flex;
+  gap: 4px;
+}
+
+.speedBtn {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.speedBtn:hover {
+  color: var(--text);
+  background: var(--card);
+}
+
+.speedActive {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: #fff1f2;
+  font-weight: 600;
+}
+
+.pipBtn {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.pipBtn:hover {
+  color: var(--text);
+}
