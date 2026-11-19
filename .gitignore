@@ -36,3 +36,6 @@ Thumbs.db
 *.log
 .idea/
 .vscode/
+
+# Agent skills (vendored)
+.agents/
