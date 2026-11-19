@@ -34,7 +34,7 @@ hoàn chỉnh có nhịp cắt khớp với lời bình.
             └────────────┬────────────┘
                          ▼
             ┌─────────────────────────┐
-            │  FFmpeg render          │  cut → concat → mix audio → burn sub
+            │  FFmpeg render          │  cut → concat → mix audio → xuất .srt
             │  (NVENC, 1080p30)       │
             └────────────┬────────────┘
                          ▼
